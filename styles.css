@@ -1,0 +1,360 @@
+/* Базовые стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Контейнер */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Шапка сайта */
+header {
+    background-color: #007BFF;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+    /* Плавное изменение фона */
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 10px 0;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 5px 10px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #FFD700;
+    transform: scale(1.1);
+}
+
+/* Эффект прозрачности при прокрутке */
+header.transparent {
+    background-color: rgba(0, 123, 255, 0.5);
+    /* Меняем прозрачность при прокрутке */
+}
+
+/* Герой-секция */
+.hero {
+    background: linear-gradient(rgba(0, 123, 255, 0.8), rgba(0, 123, 255, 0.8)), url('https://via.placeholder.com/1500x600') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 120px 20px;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.hero .btn {
+    display: inline-block;
+    background: #FF6347;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.hero .btn:hover {
+    background: #FF4500;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Секции */
+section {
+    padding: 60px 20px;
+    margin-bottom: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+section:hover {
+    transform: scale(1.01);
+}
+
+section h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* О нас */
+#about p {
+    text-align: justify;
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+/* Курсы */
+#courses .course-list {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#courses .course {
+    flex: 1 1 calc(33.333% - 20px);
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#courses .course:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+#courses .course h3 {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+}
+
+#courses .course p {
+    margin-bottom: 20px;
+}
+
+#courses .course button {
+    background: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+#courses .course button:hover {
+    background: #0056b3;
+    transform: scale(1.1);
+}
+
+/* Блог */
+#blog article {
+    margin-bottom: 20px;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+#blog article:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+#blog article h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #007BFF;
+}
+
+#blog article p {
+    line-height: 1.8;
+}
+
+/* Контакты */
+#contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#contact form input,
+#contact form textarea {
+    padding: 15px;
+    font-size: 1.1rem;
+    border: 1px solid #ddd;
+    border-radius: 50px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#contact form input:focus,
+#contact form textarea:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+#contact form button {
+    background: #007BFF;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+#contact form button:hover {
+    background: #0056b3;
+    transform: translateY(-3px);
+}
+
+/* Адаптивный дизайн */
+@media (max-width: 768px) {
+    #courses .course-list {
+        flex-direction: column;
+    }
+
+    #courses .course {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header nav ul li a {
+        font-size: 1rem;
+    }
+
+    .hero h2 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    .hero .btn {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+
+    section h2 {
+        font-size: 1.8rem;
+    }
+
+    #courses .course h3 {
+        font-size: 1.3rem;
+    }
+
+    #blog article h3 {
+        font-size: 1.4rem;
+    }
+}
+
+/* Футер */
+footer {
+    background: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* Реклама справа */
+.ad-banner {
+    position: fixed;
+    right: -300px;
+    /* Начальная позиция за пределами экрана */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 280px;
+    background-color: #FFD700;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: right 0.5s ease-in-out;
+    /* Плавное движение рекламы */
+    z-index: 9999;
+}
+
+.ad-banner .ad-content {
+    color: #333;
+    text-align: center;
+}
+
+.ad-banner h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.ad-banner p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.ad-banner .btn-ad {
+    display: inline-block;
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.ad-banner .btn-ad:hover {
+    background-color: #0056b3;
+}
+
+/* Показываем рекламу при прокрутке */
+.show-ad {
+    right: 0;
+    /* Позиционируем рекламу в видимой области */
+}
