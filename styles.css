@@ -358,3 +358,28 @@ footer p {
     right: 0;
     /* Позиционируем рекламу в видимой области */
 }
+header .logo img {
+    max-width: 100px; /* Размер логотипа */
+    height: auto;
+    margin-right: 15px;
+    vertical-align: middle;
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header h1 {
+    font-size: 24px;
+    margin: 0;
+}
+header .logo {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+header.scrolled .logo {
+    opacity: 0.5; /* Уменьшение непрозрачности */
+    transform: scale(0.9); /* Легкое уменьшение размера */
+}

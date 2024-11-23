@@ -9,9 +9,11 @@
 </head>
 
 <body>
-    <!-- Шапка -->
     <header>
         <div class="container">
+            <div class="logo">
+                <img src="DALL·E 2024-11-23 12.37.31 - A modern and minimalistic logo for 'Brain School' featuring the letters 'B' and 'S' integrated into a brain-inspired design. The logo uses shades of b.png" alt="Логотип Brain School">
+            </div>
             <h1>Brain School</h1>
             <nav>
                 <ul>
@@ -24,6 +26,7 @@
             </nav>
         </div>
     </header>
+    
 
     <!-- Главный экран -->
     <section id="hero" class="hero">
@@ -123,6 +126,23 @@
             <a href="#" class="btn-ad">Узнать больше</a>
         </div>
     </div>
+
+    <script>
+// Получаем элемент шапки
+const header = document.querySelector('header');
+
+// Функция для обработки прокрутки
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) { // Если прокрутили страницу более чем на 50px
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
+    }
+});
+
+</script>
+
+<script src="https://widget.gravi.org/code/index.js" data-grv-id="1295" data-grv-key="10ot0h8tjxm3tvdtck" async></script>
 
 </body>
 
